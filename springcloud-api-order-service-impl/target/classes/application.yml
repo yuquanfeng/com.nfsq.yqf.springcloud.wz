@@ -1,0 +1,30 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: springcloud-order
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+#开启feign超时
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+#开启hystrix
+feign:
+  hystrix:
+    enabled: true
+##开启hystrix的超时同时设置超时时间一般比ribbon的超时时间长一点
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+          #设置hystrix超时时间
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000
