@@ -5,6 +5,7 @@ import bean.YQFRequest;
 import entity.User;
 import order.feign.MemberFeign;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderService implements IOrderService {
     @Autowired
     MemberFeign memberFeign;
+
+    @Value("${server.port}")
+    private String serverPort;
+
+    @RequestMapping("/")
+    public String index(){
+        return "我是订单服务,端口号："+serverPort;
+    }
     @Override
     @RequestMapping("/hello")
     public YQFRequest hello() {

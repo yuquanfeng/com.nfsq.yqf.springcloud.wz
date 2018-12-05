@@ -9,16 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-service</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>springcloud-api-member-service</module>
-        <module>springcloud-api-order-service</module>
-        <module>springcloud-api-pay-service</module>
-    </modules>
+    <artifactId>springcloud-api-pay-service-impl</artifactId>
     <dependencies>
         <dependency>
-            <artifactId>springcloud-common</artifactId>
+            <artifactId>springcloud-api-pay-service</artifactId>
             <groupId>com.nfsq.yqf</groupId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

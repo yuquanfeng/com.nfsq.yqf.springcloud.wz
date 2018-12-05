@@ -5,6 +5,7 @@ import bean.YQFRequest;
 import entity.User;
 import member.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberService implements IMemberService {
     @Autowired
     UserMapper userMapper;
+
+    @Value("${server.port}")
+    private String serverPort;
+
+    @RequestMapping("/")
+    public String index(){
+        return "我是会员服务,端口号;"+serverPort;
+    }
+
     @Override
     @RequestMapping("/getUser")
     public YQFRequest<User> selectUserByName(String userName) {

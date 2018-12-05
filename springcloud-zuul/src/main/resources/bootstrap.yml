@@ -1,0 +1,28 @@
+server:
+  port: 80
+
+spring:
+  application:
+    ##此处的服务名一定要和git上的文件的服务名一样，
+    #git上文件的取名规则：服务名-环境（dev，test，pre，prod）.properties(.yml)
+    name: springcloud-zuul
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        #config服务端的服务名
+        service-id: springcloud-config-server
+        enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+#开启监控中心所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

@@ -1,0 +1,20 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: springcloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/qfyu/zuul-config.git
+          search-paths:
+          - zuulconfig
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eureka/
+    fetch-registry: true
+    register-with-eureka: true

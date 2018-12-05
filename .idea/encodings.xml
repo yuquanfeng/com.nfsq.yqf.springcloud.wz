@@ -4,10 +4,14 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-api-member-service-impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-api-order-service-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-api-pay-service-impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-service/springcloud-api-member-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-service/springcloud-api-order-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-service/springcloud-api-pay-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-zuul" charset="UTF-8" />
   </component>
 </project>

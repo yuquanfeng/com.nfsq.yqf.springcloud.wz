@@ -10,8 +10,12 @@
         <module name="springcloud-api-member-service-impl" />
         <module name="springcloud-api-order-service" />
         <module name="springcloud-api-order-service-impl" />
+        <module name="springcloud-api-pay-service" />
+        <module name="springcloud-api-pay-service-impl" />
         <module name="springcloud-common" />
+        <module name="springcloud-config" />
         <module name="springcloud-server" />
+        <module name="springcloud-zuul" />
       </profile>
     </annotationProcessing>
   </component>
