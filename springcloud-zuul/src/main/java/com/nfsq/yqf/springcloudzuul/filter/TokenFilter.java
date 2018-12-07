@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
  * Time:21:32
  **/
 //把过滤器注入到spring容器中
-@Component
+//@Component
 public class TokenFilter extends ZuulFilter {
     /**
      * 过滤器的类型

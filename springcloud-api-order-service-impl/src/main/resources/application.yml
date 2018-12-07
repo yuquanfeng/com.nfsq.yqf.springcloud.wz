@@ -6,7 +6,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8080/eureka/
+      defaultZone: http://127.0.0.1:8088/eureka/
     register-with-eureka: true
     fetch-registry: true
 #开启feign超时
@@ -28,3 +28,5 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 6000
+swagger:
+  base-package: order.service

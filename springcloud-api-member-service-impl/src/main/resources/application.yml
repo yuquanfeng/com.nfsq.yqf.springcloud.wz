@@ -11,7 +11,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8080/eureka/
+      defaultZone: http://127.0.0.1:8088/eureka/
     fetch-registry: true
     register-with-eureka: true
   instance:
@@ -20,3 +20,5 @@ eureka:
 mybatis:
   mapper-locations: mapper/*.xml
   type-aliases-package: entity
+swagger:
+  base-package: member.service
